@@ -6,6 +6,7 @@ flex-wrap: wrap;
 align-items: center;
 margin: -7px;
 padding: 50px 0;
+align-items: stretch;
 `
 const CastCard = styled.li`
 margin: 7px;
@@ -19,22 +20,24 @@ position: relative;
 `
 const Image = styled.img`
 display: block;
- height: 100%;
- width: 100%;
- object-fit: cover;`
+height: 100%;
+width: 100%;
+object-fit: cover;`
 
- const InfoContainer = styled.div`
- height: 85px`
+const InfoContainer = styled.div`
+padding: 20px 10px;
+`
 
- const Name = styled.h3`
- text-align: center;
- font-size: 18px;
- font-weight: 600;
- margin: 15px 0;
- `
- const Character = styled.p`
- font-size: 16px;
- margin-left: 15px;
- `
+const Name = styled.h3`
+text-align: center;
+font-size: 18px;
+font-weight: 600;
+margin-bottom: 15px;
+`
+const Character = styled.p`
+font-size: 16px;
+text-align: center;
+
+`
 
  export {CastList, CastCard, Image, ImgContainer, Name, Character, InfoContainer}
