@@ -19,11 +19,15 @@ getMovieInfo(id).then(mow => {
     setGenres(mow.genres)})
 }, [id])
 
+    const year = (date) => {
+        return date.split("-")[0]
+    }
+   
 const {title, backdrop_path , overview, vote_average, release_date} = movie;
-
+console.log(release_date);
     return <div>
         <ButtonBack to={locationRef.current}><IconBack/> Go back</ButtonBack>
-         <MovieContainer>
+        {movie ? <MovieContainer>
              <ImgContainer>
                 <Image src={backdrop_path ? `${EP_IMG}${backdrop_path}` : photo}></Image>
             </ImgContainer>  
@@ -48,12 +52,11 @@ const {title, backdrop_path , overview, vote_average, release_date} = movie;
                     <TextElem>{overview}</TextElem>
                 
             </MovieInfo> 
-            </MovieContainer>
+            </MovieContainer> : null}
         <AdditionSection/>
         <Suspense>  
             <Outlet />
         </Suspense>
-
     </div>}
 
 export default MovieItem

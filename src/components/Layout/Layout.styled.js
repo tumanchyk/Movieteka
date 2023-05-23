@@ -23,7 +23,7 @@ const StyledLink = styled(NavLink)`
   font-size: 20px;
 
   &:not(:last-child){
- margin-right: 20px;
+ margin-right: 30px;
 }
   &.active {
     color: #fff;
