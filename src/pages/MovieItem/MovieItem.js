@@ -5,7 +5,7 @@ import { AdditionSection } from "components/Addition info/Addition";
 import { ButtonBack, IconBack, Title, Section, MovieInfo, SectionTitle, TextElem, MovieContainer, Image, ImgContainer } from "./MovieItem.styled";
 import photo from 'not-found-image.jpg'
 const EP_IMG= 'https://image.tmdb.org/t/p/w500';
-
+// import formatDate from "util/funcFormatDate";
 
 const MovieItem = () =>{
 const [movie, setMovie] = useState({})
@@ -18,10 +18,6 @@ getMovieInfo(id).then(mow => {
     setMovie(mow)
     setGenres(mow.genres)})
 }, [id])
-
-    const year = (date) => {
-        return date.split("-")[0]
-    }
    
 const {title, backdrop_path , overview, vote_average, release_date} = movie;
 console.log(release_date);
